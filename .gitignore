@@ -1,0 +1,42 @@
+# ProWeb Sheet Python
+
+A Python-based spreadsheet application inspired by the attached browser spreadsheet, rebuilt with a Flask backend and a lightweight browser UI.
+
+## Features
+
+- Editable grid in the browser
+- Formula evaluation for basic spreadsheet functions
+- CSV import/export
+- XLSX export
+- Simple cell selection and formula bar
+
+## Run
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+```
+
+Then open: http://localhost:5000
+
+## Structure
+
+- `app.py` — Flask app and routes
+- `spreadsheet_core.py` — spreadsheet engine and formula evaluator
+- `templates/index.html` — UI shell
+- `static/app.js` — frontend logic
+- `static/styles.css` — styling
+
+## Notes
+
+This is a Python conversion of the browser prototype and focuses on a working spreadsheet engine with core functionality rather than a complete reimplementation of every advanced feature from the JavaScript version.
+
+## Next possible upgrades
+
+- Undo/redo stack
+- Cell styles and formatting
+- Freeze panes and row/column resizing
+- Multi-sheet support
+- Advanced formulas and imported workbook compatibility

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProWeb Sheet Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <div class="app-shell">
+        <header class="toolbar">
+            <button id="new-sheet">New</button>
+            <button id="load-csv">Load CSV</button>
+            <button id="export-csv">Export CSV</button>
+            <button id="export-xlsx">Export XLSX</button>
+            <input id="file-input" type="file" accept=".csv" hidden />
+        </header>
+
+        <div class="formula-bar">
+            <label>Cell</label>
+            <input id="cell-address" value="A1" readonly />
+            <label>Formula</label>
+            <input id="formula-input" type="text" placeholder="Enter value or formula e.g. =SUM(A1:A5)" />
+        </div>
+
+        <div class="sheet-wrapper">
+            <div class="corner-cell"></div>
+            <div id="col-headers" class="col-headers"></div>
+            <div id="row-headers" class="row-headers"></div>
+            <div id="grid" class="grid" tabindex="0"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
